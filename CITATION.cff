@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Lenz"
+  given-names: "Anne-Kristin"
+  orcid: "https://orcid.org/0000-0002-9899-8088"
+title: "Scripts and Files from the PhD Thesis"
+version: 1.0
+date-released: 2024-01-01
+url: "https://github.com/aklenz/phd-code"
