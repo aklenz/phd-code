@@ -2,20 +2,20 @@
  *  Laser Barrier Script - Anne-Kristin Lenz - Version 4.0 - 25/06/2020
  ****************************************************************************************************
  * This Arduino sketch is used for a laser barrier triggering measurements with chronos 1.4 highspeed
- * cmaeras.
+ * cameras.
  * 3 laser transmitters (KY-008) and 3 laser receivers, 2 pairs of those are orthogonal (beams 
  * build cross) to each other and parallel to the third one, are used to detect an object (plastic 
  * bead, water drop) passing through. If the object passes through all three laser beams the
- * measurement will be triggerd. Additionallly the lapse of time between the disruption of the first 
- * and second and between the second and thrid is being displayed on the serial monitor. Only
- * drops that fall through upper and lower laser in certain time will tigger the highspeed cameras 
+ * measurement will be triggerd. Additionally the lapse of time between the disruption of the first 
+ * and second and between the second and third is being displayed on the serial monitor. Only
+ * drops that fall through upper and lower laser in certain time will trigger the highspeed cameras 
  * (0-40 ms)
 ***************************************************************************************************/
 
 /****************************************************************************************************  
  * Declarations
  * 
- * Define all pins of arduino used (Contol output of all receivers and lasers, control input of all
+ * Define all pins of arduino used (Control output of all receivers and lasers, control input of all
  * lasers with one pin each) and declare variables
  * 
  * Set the threshold time: time between interruption of laser 2 and laser 3 has to be smaller than
@@ -166,7 +166,7 @@ void loop() {
         display.println(dt_1/1000);
         display.display();
        }
-    } // if the time difference between interruption of laser 2 and 3 is longer than the theshold
+    } // if the time difference between interruption of laser 2 and 3 is longer than the threshold
       // time (thresholdTime), an error message will be displayed
     else {
       display.clearDisplay();
@@ -196,7 +196,7 @@ void loop() {
  * 
  * This function is running at beginning of measurement to turn on lasers and check whether all 
  * lasers and receivers are working. If the setup is ready for the measurement to begin, the line 
- * "Ready for measurement" is displayed in the serial monitor and controll LED is switched off. If 
+ * "Ready for measurement" is displayed in the serial monitor and control LED is switched off. If 
  * not all lasers and receivers are working, the line "Error in Setup" will be displayed and the first 
  * non-working component detected will be named. The lasers will be switched off after 10s.
 ****************************************************************************************************/
